@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+{% block label %}
+
+    数据统计
+{% endblock %}
+
+{% block content %}
+    <form method="post">
+
+        {% for o in task() %}
+            <p>{{ o }}</p>
+
+        {% endfor %}
+        <input class="btn btn-danger btn-block" type="submit" value="提交">
+    </form>>
+{% endblock %}
